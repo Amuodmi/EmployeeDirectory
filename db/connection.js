@@ -3,8 +3,8 @@ const mySQL = require('mySQL2');
 const db = mySQL.startConnection(
     {
         host: 'localhost',
-        user: 'mysql -u root -p',
-        password: 'Supergeil!016',
+        user: 'root',
+        password: process.env.SECRET_KEY,
         database: 'employee_tracker'
     },
     console.log('successfully connected to the Employee Tracker database')

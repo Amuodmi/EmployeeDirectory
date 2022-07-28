@@ -9,7 +9,7 @@ VALUES
     ('Egwene', 'AlVere', '007', 'Moiraine'),
     ('Nynaeve', 'AlMeara', '008', 'Moiraine');
 
-INSERT INTO departments(name)
+INSERT INTO departments(depName)
 VALUES
   ('Engineering'),
   ('Finance'),
@@ -18,11 +18,11 @@ VALUES
 
 INSERT INTO roles(job_title, salary, department, role_id)
 VALUES
-    ('Sales Lead', '$100,000', 'Sales', '1'),
-    ('Salesperson', '$80,000', 'Sales', '2'),
-    ('Lead Engineer', '$150,000', 'Engineering', '3'),
-    ('Software Engineer', '$120,000', 'Engineering', '4'),
-    ('Account Manager', '$160,000', 'Finance', '5'),
-    ('Accountant', '$120,000', 'Finance', '6'),
-    ('Legal Team Lead', '$200,000', 'Legal', '7'),
-    ('Lawyer', '$180,000', 'Legal', '8');
+    ('Sales Lead', 100,000, 'Sales', 100),
+    ('Salesperson', 80,000, 'Sales', 200),
+    ('Lead Engineer', 150,000, 'Engineering', 300),
+    ('Software Engineer', 120,000, 'Engineering', 400),
+    ('Account Manager', 160,000, 'Finance', 500),
+    ('Accountant', $120,000, 'Finance', 600),
+    ('Legal Team Lead', 200,000, 'Legal', 700),
+    ('Lawyer', $180,000, 'Legal', 800);

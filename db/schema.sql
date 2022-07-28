@@ -1,7 +1,9 @@
+-- deletes if there already is one
 DROP TABLE IF EXISTS employees;
 DROP TABLE IF EXISTS departments;
 DROP TABLE IF EXISTS roles; 
 
+-- creates tables and info 
 CREATE TABLE employees (
     id INTEGER AUTO_INCREMENT PRIMARY KEY, 
     first_name VARCHAR(30) NOT NULL, 
@@ -9,13 +11,13 @@ CREATE TABLE employees (
     employee_id INTEGER,
     job_title VARCHAR(30) NOT NULL,
     department VARCHAR(30) NOT NULL, 
-    salary VARCHAR(30) NOT NULL, 
+    salary INTEGER NOT NULL, 
     reporting_manager VARCHAR(30) NOT NULL 
 );
 
 CREATE TABLE departments (
     id INTEGER AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(30) NOT NULL
+    depName VARCHAR(30) NOT NULL
 );
 
 CREATE TABLE roles (

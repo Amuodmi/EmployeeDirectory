@@ -23,42 +23,40 @@ const startQuestions = () => {
             ],
         },
     ])
-    .then((answer) => {
+    .then((answers) => {
         //begins next question
-    pickedChoice(answer);
+    pickedChoice(answers);
     })};
 
- function pickedChoice(answer){
+ function pickedChoice(answers){
     //if View All Employees was chosen, set new name for data, gets data from employees, dept, roles, and joins it to the left column - these prompts will begin:
-if (answer.selectOption === "View All Employees"){
+if (answers.selectOption === "View All Employees"){
     const viewEmployees = `SELECT employees.id AS 'ID', employees.first_name AS 'First Name', employees.last_name AS 'Last Name', employees.employee_id AS 'Employee ID', employees.job_title AS 'Job Title', employees.department AS 'Department', employees.salary AS 'Salary", employees.reporting_manager AS 'Reporting Manager'
     FROM employees
     LEFT JOIN department
     ON employees.department_id = department.id
     LEFT JOIN roles
-    ON employees.roles_id = roles.id`;
-
-    then [startQuestions()];
+    ON employees.roles_id = roles.id`; 
 }
 
 //View All Departments
-else if (answer.selectOption === "View All Departments"){
+else if (answers.selectOption === "View All Departments"){
     const viewDepartments = `SELECT * FROM departments ORDER BY name`;
 
-    then [startQuestions()];
 }
 
 //View All Roles
-else if (answer.selectOption === "View All Roles") {
+else if (answers.selectOption === "View All Roles") {
     const viewRoles = `SELECT roles.job_title AS 'Job Title', roles.role_id AS 'Role ID', salary, department`;
 
-    then [startQuestions()];
 }
 else {
     console.log("Error getting table data.");
 }
 
 };
+
+
  
 //Add Role
 function addOptions(answers){
@@ -199,6 +197,5 @@ if (answer.selectOption === "Update Employee Role"){
         startQuestions();
     })
 }
-}
-
 };
+startQuestions();

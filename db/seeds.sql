@@ -1,22 +1,22 @@
 -- adding info to be inserted into previously created tables
-INSERT INTO employees(first_name, last_name, role_id, reporting_manager)
+INSERT INTO employees (first_name, last_name, role_id, job_title, department, salary, reporting_manager)
 VALUES
-    ('Moiraine', 'Damodred', '002', 'Siuan'),
-    ('Lan', 'Mandragoran', '003', 'Moiraine'),
-    ('Rand', 'AlThor', '004', 'Moiraine'),
-    ('Perrin', 'Ayabara', '005', 'Moiraine'),
-    ('Mat', 'Cauthon', '006', 'Moiraine'),
-    ('Egwene', 'AlVere', '007', 'Moiraine'),
-    ('Nynaeve', 'AlMeara', '008', 'Moiraine');
+    ('Moiraine', 'Damodred', 002, 'Legal Team Lead', 'Legal', 200,000, 1),
+    ('Lan', 'Mandragoran', 003, 'Lawyer', 'Legal', 180,000, 2),
+    ('Rand', 'AlThor', 004, 'Account Manager', 'Finance', 160,000, 2),
+    ('Perrin', 'Ayabara', 005, 'Lead Engineer', 'Engineering', 150,000, 2),
+    ('Mat', 'Cauthon', 006, 'Software Engineer', 'Engineering', 120,000, 3),
+    ('Egwene', 'AlVere', 007, 'Sales Lead', 'Sales', 100,000, 3),
+    ('Nynaeve', 'AlMeara', 008, 'Salesperson', 'Sales', 80,000, 3);
 
-INSERT INTO departments(depName)
+INSERT INTO departments (name)
 VALUES
   ('Engineering'),
   ('Finance'),
   ('Legal'),
   ('Sales');
 
-INSERT INTO roles(job_title, salary, department, role_id)
+INSERT INTO roles (job_title, salary, department, role_id)
 VALUES
     ('Sales Lead', 100,000, 'Sales', 100),
     ('Salesperson', 80,000, 'Sales', 200),

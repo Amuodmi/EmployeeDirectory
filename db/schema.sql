@@ -10,7 +10,7 @@ CREATE TABLE employees (
     last_name VARCHAR(30) NOT NULL, 
     job_title VARCHAR(30) NOT NULL,
     department VARCHAR(30) NOT NULL, 
-    salary DECIMAL(6 , 2) NOT NULL, 
+    salary DECIMAL(8 , 2) NOT NULL, 
     reporting_manager INTEGER NOT NULL 
 );
 
@@ -23,5 +23,5 @@ CREATE TABLE roles (
     id INTEGER AUTO_INCREMENT PRIMARY KEY, 
     job_title VARCHAR(30) NOT NULL, 
     department VARCHAR(30) NOT NULL,
-    salary DECIMAL(6 , 2) NOT NULL
+    salary DECIMAL(8 , 2) NOT NULL
 );
